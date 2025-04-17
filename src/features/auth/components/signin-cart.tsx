@@ -63,6 +63,9 @@ export const SignInCart = () => {
                     Sign up with Github
                 </Button>
             </div>
+            <p className="text-xs text-muted-foreground">
+                
+            </p>
         </CardContent>
     </Card>
   )
