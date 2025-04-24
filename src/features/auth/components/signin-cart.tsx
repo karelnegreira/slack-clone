@@ -5,9 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
+import { SignInFlow } from '../types';
 
+interface SignInProps {
+    setState: (state: SignInFlow) => void;
+}
 
-export const SignInCart = () => {
+export const SignInCart = ({setState}: SignInProps) => {
   return (
     <Card className="w-full h-full p-8">
         <CardHeader className="px-0 pt-0">
@@ -64,7 +68,7 @@ export const SignInCart = () => {
                 </Button>
             </div>
             <p className="text-xs text-muted-foreground">
-                Don't have an account? <span className="text-sky-700 hover:underline cursor-pointer">Sign up</span>
+                Don't have an account? <span onClick={() => setState("signUp")} className="text-sky-700 hover:underline cursor-pointer">Sign up</span>
             </p>
         </CardContent>
     </Card>
