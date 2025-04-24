@@ -64,7 +64,7 @@ export const SignInCart = () => {
                 </Button>
             </div>
             <p className="text-xs text-muted-foreground">
-                
+                Don't have an account? <span className="text-sky-700 hover:underline cursor-pointer">Sign up</span>
             </p>
         </CardContent>
     </Card>
