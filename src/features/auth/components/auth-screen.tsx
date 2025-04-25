@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { SignInFlow } from "../types";
 import { SignInCart } from "./signin-cart";
-import { SignUpCart } from "./signup-cart";
+import { SignUpCard } from "./signup-cart";
 
 
 export const AuthScreen = () => {
@@ -12,7 +12,7 @@ export const AuthScreen = () => {
   return (
     <div className="h-full flex items-center justify-center bg-[#5C3B58]">
         <div className="md:h-auto md:w-[420px]">
-            {state == 'signIn' ? <SignInCart setState={setState}/> : <SignUpCart setState={setState}/>}
+            {state == 'signIn' ? <SignInCart setState={setState}/> : <SignUpCard setState={setState}/>}
         </div>
     </div>
   )
