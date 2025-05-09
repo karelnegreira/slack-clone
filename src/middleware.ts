@@ -2,14 +2,14 @@ import {
   convexAuthNextjsMiddleware,
   createRouteMatcher,
   nextjsMiddlewareRedirect,
-  isAuthenticatedNexjs, 
+  isAuthenticatedNextjs, 
 
 } from "@convex-dev/auth/nextjs/server";
 
 const isPublicPage = createRouteMatcher(["/signin"]);
  
-export default convexAuthNextjsMiddleware((request: any) => {
-  if (!isPublicPage(request) && isAuthenticatedNexjs()) {
+export default convexAuthNextjsMiddleware((request) => {
+  if (!isPublicPage(request) && isAuthenticatedNextjs()) {
     return nextjsMiddlewareRedirect(request, "/signin");
   }
 });
